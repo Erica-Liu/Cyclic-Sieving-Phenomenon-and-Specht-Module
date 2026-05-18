@@ -24,6 +24,7 @@ const summaryPreview = document.getElementById("summary-preview");
 const storageKey = "csp-specht-weekly-log";
 let weeklyLog = loadLogEntries();
 let currentWeek = "1";
+let previewRenderToken = 0;
 
 function loadLogEntries() {
   const storedValue = window.localStorage.getItem(storageKey);
@@ -58,6 +59,8 @@ function escapeHtml(text) {
 }
 
 function renderPreview(text) {
+  previewRenderToken += 1;
+  const token = previewRenderToken;
   const trimmed = text.trim();
 
   if (!trimmed) {
@@ -71,9 +74,27 @@ function renderPreview(text) {
     summaryPreview.innerHTML = html;
   }
 
-  if (window.MathJax?.typesetPromise) {
-    window.MathJax.typesetPromise([summaryPreview]).catch(() => {});
+  scheduleMathTypeset(token);
+}
+
+function scheduleMathTypeset(token, attempts = 0) {
+  if (token !== previewRenderToken) {
+    return;
   }
+
+  if (window.MathJax?.typesetClear && window.MathJax?.typesetPromise) {
+    window.MathJax.typesetClear([summaryPreview]);
+    window.MathJax.typesetPromise([summaryPreview]).catch(() => {});
+    return;
+  }
+
+  if (attempts >= 20) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    scheduleMathTypeset(token, attempts + 1);
+  }, 150);
 }
 
 function updateEditor(week) {
@@ -97,6 +118,10 @@ weekButtons.forEach((button) => {
 });
 
 summaryField.addEventListener("input", () => {
+  renderPreview(summaryField.value);
+});
+
+window.addEventListener("load", () => {
   renderPreview(summaryField.value);
 });
 
