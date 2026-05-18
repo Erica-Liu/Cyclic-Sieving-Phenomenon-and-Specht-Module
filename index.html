@@ -11,6 +11,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=2" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["\\(", "\\)"], ["$", "$"]],
+          displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+        },
+        svg: {
+          fontCache: "global"
+        }
+      };
+    </script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
   </head>
   <body>
     <div class="page-shell">
@@ -311,11 +326,21 @@
               <label class="log-field" for="weekly-summary">
                 Weekly summary
               </label>
+              <p class="log-help">
+                LaTeX is supported in the preview below. Use inline math like
+                <code>\(q^n - 1\)</code> or display math like
+                <code>$$\sum_T q^{\mathrm{maj}(T)}$$</code>.
+              </p>
               <textarea
                 id="weekly-summary"
                 rows="12"
                 placeholder="Write what you read, what examples you worked through, questions for the next meeting, and any ideas or obstacles worth tracking."
               ></textarea>
+
+              <div class="log-preview-block">
+                <p class="log-field">Preview</p>
+                <div id="summary-preview" class="summary-preview"></div>
+              </div>
 
               <div class="log-actions">
                 <button id="save-summary" class="action-button primary">Save Summary</button>
@@ -327,6 +352,6 @@
       </main>
     </div>
 
-    <script src="app.js?v=1"></script>
+    <script src="app.js?v=2"></script>
   </body>
 </html>
