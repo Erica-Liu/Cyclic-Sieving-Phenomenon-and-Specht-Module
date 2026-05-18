@@ -106,109 +106,110 @@
             <article class="week-card">
               <div class="week-header">
                 <span class="week-tag">Week 1</span>
-                <h3>Tableaux Foundations</h3>
+                <h3>CSP from Rotating Objects</h3>
               </div>
               <p class="week-focus">
-                Focus on partitions, Ferrers diagrams, Young tableaux, and the
-                combinatorial language used throughout the project.
+                State the definition of cyclic sieving and understand one
+                complete example from rotating combinatorial objects.
               </p>
               <ul>
-                <li>Read Fulton, Chapters 1 to 2 on tableaux basics.</li>
-                <li>Define standard Young tableaux and practice listing small examples.</li>
-                <li>Discuss why tableaux organize symmetric group combinatorics.</li>
+                <li>Read Sagan's survey, Sections 1 to 2, and skim the introduction of Reiner-Stanton-White.</li>
+                <li>Verify CSP for 2-subsets of [4] under rotation using the Gaussian binomial coefficient.</li>
+                <li>If time permits, repeat the example for binary words with two 1s.</li>
               </ul>
               <p class="meeting-note">
-                Meeting: compare examples, clarify notation, and set expectations for proof style.
+                Outcome: explain the CSP definition and one full example without relying on notes.
               </p>
             </article>
 
             <article class="week-card">
               <div class="week-header">
                 <span class="week-tag">Week 2</span>
-                <h3>Descents and Major Index</h3>
+                <h3>Tableaux, Descents, and Major Index</h3>
               </div>
               <p class="week-focus">
-                Learn tableau statistics that later connect to q-analogues and representation theory.
+                Understand how a q-polynomial can be built from a statistic on standard Young tableaux.
               </p>
               <ul>
-                <li>Read Sagan, Sections 1.3 to 1.5 on SYTs and descent sets.</li>
-                <li>Compute descent sets and major index for small tableaux by hand.</li>
-                <li>Begin relating statistics on tableaux to generating functions.</li>
+                <li>Read a short section from Sagan or Fulton on Young diagrams and standard Young tableaux.</li>
+                <li>Learn the definitions of descent set and major index.</li>
+                <li>List all SYT of shapes (2,1) and (2,2), then compute Des(T), maj(T), and sum T q^maj(T).</li>
               </ul>
               <p class="meeting-note">
-                Meeting: review worked examples and identify recurring combinatorial patterns.
+                Outcome: explain descent set and major index concretely in small examples.
               </p>
             </article>
 
             <article class="week-card">
               <div class="week-header">
                 <span class="week-tag">Week 3</span>
-                <h3>q-Analogues and Generating Functions</h3>
+                <h3>Hook Formulas and q-Hook Formulas</h3>
               </div>
               <p class="week-focus">
-                Build the q-analogue toolkit needed to understand CSP statements and formulas.
+                See f<sup>&lambda;</sup>(q) as a q-analogue of the ordinary tableau count f<sup>&lambda;</sup>.
               </p>
               <ul>
-                <li>Read Stanley, Enumerative Combinatorics Vol. 1, Section 1.7.</li>
-                <li>Study q-integers, q-factorials, and q-binomial coefficients.</li>
-                <li>Work examples showing how classical counting changes in the q-setting.</li>
+                <li>Read about hook lengths and the ordinary hook-length formula.</li>
+                <li>Skim the q-hook or major-index formula without requiring a full proof.</li>
+                <li>Compute hook lengths and f<sup>&lambda;</sup> for (3,1), (2,2), and (2,1,1).</li>
+                <li>Compare the q = 1 value of the q-hook expression with the ordinary hook formula.</li>
               </ul>
               <p class="meeting-note">
-                Meeting: connect generating functions to the statistics from Week 2.
+                Outcome: understand the relation between ordinary counting and q-counting for tableaux.
               </p>
             </article>
 
             <article class="week-card">
               <div class="week-header">
                 <span class="week-tag">Week 4</span>
-                <h3>Cyclic Sieving Phenomenon</h3>
+                <h3>Specht Modules Without Too Much Algebra</h3>
               </div>
               <p class="week-focus">
-                Study the formal definition of CSP and analyze examples where evaluation at roots of unity counts fixed points.
+                Understand the slogan that tableaux index bases for irreducible representations of S<sub>n</sub>.
               </p>
               <ul>
-                <li>Read Reiner, Stanton, White (2004).</li>
-                <li>Understand the CSP triple: set, cyclic action, and q-polynomial.</li>
-                <li>Examine examples such as rotating objects or promotion-related actions.</li>
+                <li>Read Sagan on tabloids, polytabloids, and Specht modules, focusing on examples more than proofs.</li>
+                <li>Construct the representations indexed by (3), (2,1), and (1,1,1) for S<sub>3</sub>.</li>
+                <li>Explain why dim S<sup>&lambda;</sup> equals the number of SYT of shape &lambda;.</li>
               </ul>
               <p class="meeting-note">
-                Meeting: unpack why roots of unity evaluations encode symmetry data.
+                Outcome: describe how Specht modules connect tableaux to symmetric group representation theory.
               </p>
             </article>
 
             <article class="week-card">
               <div class="week-header">
                 <span class="week-tag">Week 5</span>
-                <h3>Promotion and q-Hook-Length</h3>
+                <h3>Promotion and Tableau CSP</h3>
               </div>
               <p class="week-focus">
-                Explore cyclic actions on tableaux and the formulas that track their statistics.
+                Explain the rectangular-tableau CSP example concretely through promotion.
               </p>
               <ul>
-                <li>Study the promotion operator on standard Young tableaux.</li>
-                <li>Learn the q-hook-length formula and test it on small shapes.</li>
-                <li>Discuss how promotion suggests a natural source of cyclic sieving.</li>
+                <li>Read the promotion and CSP section of Sagan's survey and the introduction of Rhoades.</li>
+                <li>Compute promotion orbits for SYT of shape (2,2).</li>
+                <li>Evaluate the major-index polynomial at relevant roots of unity and compare with fixed tableaux.</li>
               </ul>
               <p class="meeting-note">
-                Meeting: compare computational examples and identify where algebra enters.
+                Outcome: connect promotion, fixed points, and root-of-unity evaluations in one worked example.
               </p>
             </article>
 
             <article class="week-card">
               <div class="week-header">
                 <span class="week-tag">Week 6</span>
-                <h3>Specht Modules and Synthesis</h3>
+                <h3>Why Representation Theory Explains CSP</h3>
               </div>
               <p class="week-focus">
-                Bring the project together through symmetric group representations and tableau-based modules.
+                Connect promotion, fixed points, q-hook or major-index polynomials, and Specht modules in one coherent story.
               </p>
               <ul>
-                <li>Read James and Kerber, Chapter 3 on Specht modules.</li>
-                <li>Understand how tableaux index basis elements and characters.</li>
-                <li>Summarize how Specht modules illuminate CSP, major index, and q-formulas.</li>
+                <li>Read light background on characters, traces, and fake degrees from Sagan's survey or Rhoades.</li>
+                <li>Focus on the principle that trace equals fixed points when an operator permutes a basis.</li>
+                <li>Prepare a 5 to 8 minute mini-presentation or 1 to 2 page note on how Specht modules help explain CSP.</li>
               </ul>
               <p class="meeting-note">
-                Meeting: synthesize the full narrative and identify directions for further study.
+                Outcome: give a final conceptual map of the project.
               </p>
             </article>
           </div>
@@ -222,48 +223,58 @@
 
           <div class="reference-list">
             <article class="card">
-              <h3>Tableaux and Basic Combinatorics</h3>
+              <h3>Core References</h3>
+              <p>
+                <a href="https://www-users.cse.umn.edu/~white/papers/cycsieve.pdf" target="_blank" rel="noreferrer">
+                  Reiner, Stanton, White, <em>The Cyclic Sieving Phenomenon</em>
+                </a>,
+                JCTA (2004). Use for the definition of CSP and foundational examples.
+              </p>
+              <p>
+                <a href="https://users.math.msu.edu/users/bsagan/Papers/Old/csp-lms.pdf" target="_blank" rel="noreferrer">
+                  Bruce Sagan, <em>The Cyclic Sieving Phenomenon: A Survey</em>
+                </a>
+                (2010). Readable overview with examples and common proof patterns.
+              </p>
+              <p>
+                <a href="https://arxiv.org/abs/1005.2568" target="_blank" rel="noreferrer">
+                  Brendon Rhoades, <em>Cyclic Sieving, Promotion, and Representation Theory</em>
+                </a>
+                (2010). Central source for promotion on rectangular SYT and the representation-theoretic explanation.
+              </p>
+              <p>
+                <a href="https://link.springer.com/book/10.1007/978-1-4757-6804-6" target="_blank" rel="noreferrer">
+                  Bruce Sagan, <em>The Symmetric Group: Representations, Combinatorial Algorithms, and Symmetric Functions</em>
+                </a>,
+                the main book reference for tableaux, Specht modules, and symmetric group representation theory.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Background and Backup References</h3>
               <p>
                 <a href="https://www.cambridge.org/core/books/abs/young-tableaux/contents/9CA512CB121059AC8363644B8A6B1881" target="_blank" rel="noreferrer">
                   William Fulton, <em>Young Tableaux</em>
                 </a>,
-                Chapters 1 and 2.
+                a concise source for Young diagrams, tableaux, Schur functions, and representations of S<sub>n</sub> and GL<sub>n</sub>.
               </p>
               <p>
-                <a href="https://link.springer.com/book/10.1007/978-1-4757-6804-6" target="_blank" rel="noreferrer">
-                  Bruce Sagan, <em>The Symmetric Group</em>
-                </a>,
-                Sections 1.3 to 1.5.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>q-Analogues and Generating Functions</h3>
-              <p>
-                <a href="https://www.cambridge.org/core/books/enumerative-combinatorics/3155CDE1D973D49F873BDE2EAF8D7651" target="_blank" rel="noreferrer">
-                  Richard Stanley, <em>Enumerative Combinatorics, Volume 1</em>
-                </a>,
-                Section 1.7.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3>Cyclic Sieving Phenomenon</h3>
-              <p>
-                <a href="https://www-users.cse.umn.edu/~white/papers/cycsieve.pdf" target="_blank" rel="noreferrer">
-                  Victor Reiner, Dennis Stanton, Dennis White, “The Cyclic Sieving Phenomenon”
+                <a href="https://www.cambridge.org/core/books/enumerative-combinatorics/360F1EEA6B91AE359EE489AC4145EF49" target="_blank" rel="noreferrer">
+                  Richard Stanley, <em>Enumerative Combinatorics, Volume 2</em>
                 </a>
-                (2004).
+                for symmetric functions, hook-length formulas, principal specializations, P-partitions, and q-hook formulas.
               </p>
-            </article>
-
-            <article class="card">
-              <h3>Representation Theory and Specht Modules</h3>
               <p>
-                <a href="https://www.cambridge.org/core/books/abs/representation-theory-of-the-symmetric-group/preface/5B1C2F0969309788A8B96BDDDCFEF528" target="_blank" rel="noreferrer">
-                  Gordon James and Adalbert Kerber, <em>The Representation Theory of the Symmetric Group</em>
+                <a href="https://link.springer.com/book/10.1007/BFb0067708" target="_blank" rel="noreferrer">
+                  Gordon James, <em>The Representation Theory of the Symmetric Groups</em>
                 </a>,
-                Chapter 3.
+                a more algebraic backup source for tabloids, polytabloids, and Specht modules.
+              </p>
+              <p>
+                <a href="https://doc.sagemath.org/html/en/reference/combinat/sage/combinat/cyclic_sieving_phenomenon.html" target="_blank" rel="noreferrer">
+                  SageMath combinatorics documentation on cyclic sieving
+                </a>
+                for computational experiments with q-binomial coefficients and roots of unity.
               </p>
             </article>
           </div>
